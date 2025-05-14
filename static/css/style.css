@@ -785,7 +785,7 @@ body {
         
     .home-banner .home-avatar-box:before {
       content: "";
-      background-image: url(../../img/dots-effect.png);
+      background-image: url(./../img/dots-effect.png);
       position: absolute;
       top: -5px;
       left: -40px;
