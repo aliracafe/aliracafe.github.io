@@ -19,10 +19,10 @@ Primary use:    pxdraft
 12. Contact Us
 
 -------------------------------------------------------------------*/
-@import url(../../plugin/bootstrap/css/bootstrap.min.css);
-@import url(../../plugin/bootstrap/icons/bootstrap-icons.css);
-@import url(../../plugin/owl-carousel/css/owl.carousel.min.css);
-@import url(../../plugin/magnific/magnific-popup.css);
+@import url(./../plugin/bootstrap/css/bootstrap.min.css);
+@import url(./../plugin/bootstrap/icons/bootstrap-icons.css);
+@import url(./../plugin/owl-carousel/css/owl.carousel.min.css);
+@import url(./../plugin/magnific/magnific-popup.css);
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
 .navbar-toggler,
 .toggler-menu {
