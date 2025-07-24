@@ -168,6 +168,22 @@
           <img src="static/img/alira.png" alt="Logo">
         </div>
       </div>
+    <!-- REKLAM MODAL'I - BURASI YENİ EKLENEN BÖLÜM -->
+<div id="adModal">
+    <div class="ad-content">
+        <div class="countdown" id="countdown">5 saniye</div>
+        <button class="ad-close" id="adClose">&times;</button>
+        
+        <img src="reklam-görseli.jpg" alt="Özel İndirim" class="ad-image">
+        
+        <h2 class="ad-title">🎉 Özel İndirim Fırsatı!</h2>
+        <p class="ad-description">
+            Bu hafta sadece! Tüm pizza çeşitlerinde %20 indirim. 
+            Fırsatı kaçırmayın!
+        </p>
+        <a href="#blog" class="ad-button">Hemen Sipariş Ver</a>
+    </div>
+</div>
     <!-- page loading -->
     <!-- End -->
     <!-- Header -->
@@ -831,6 +847,47 @@
           intro.style.display = "none";
           site.style.opacity = 1;
         }});
+        // REKLAM MODAL FONKSİYONLARI - BURASI TAMAMEN YENİ
+function showAdModal() {
+    adModal.style.display = 'flex';
+    startCountdown();
+}
+
+function hideAdModal() {
+    adModal.style.display = 'none';
+}
+
+// GERİ SAYIM FONKSİYONU
+function startCountdown() {
+    let seconds = 5;
+    const countdownElement = document.getElementById('countdown');
+    const closeButton = document.getElementById('adClose');
+    
+    // İlk 5 saniye kapatma butonunu devre dışı bırak
+    closeButton.style.opacity = '0.5';
+    closeButton.style.pointerEvents = 'none';
+    
+    const interval = setInterval(() => {
+        seconds--;
+        countdownElement.textContent = seconds + ' saniye';
+        
+        if (seconds <= 0) {
+            clearInterval(interval);
+            countdownElement.textContent = 'Kapatabilirsiniz';
+            closeButton.style.opacity = '1';
+            closeButton.style.pointerEvents = 'auto';
+        }
+    }, 1000);
+}
+
+// MODAL KAPATMA OLAYLARI
+document.getElementById('adClose').addEventListener('click', hideAdModal);
+adModal.addEventListener('click', function(e) {
+    if (e.target === adModal) hideAdModal();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') hideAdModal();
+});
     </script>
     
 </body>
